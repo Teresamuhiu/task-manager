@@ -15,7 +15,8 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,       # only this, no regex
+    allow_origin_regex=r"https://.*\.vercel\.app",  # Allows all Vercel deployments
+    #allow_origins=origins,       # only this, no regex
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
