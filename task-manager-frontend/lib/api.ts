@@ -1,6 +1,6 @@
 //API Helper
 //Wrap FastAPI endpoints
-const API_URL = "http://127.0.0.1:8000"; // FastAPI backend
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"; // FastAPI backend
 
     export async function getTasks() {
     const res = await fetch(`${API_URL}/tasks/`, { cache: "no-store" });
