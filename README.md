@@ -1,8 +1,11 @@
 ````markdown
 # Task Manager App 
 
-A full-stack Task Manager built with FastAPI (backend) and Next.js (frontend).  
-Users can add, edit, mark tasks as done/undo, and delete tasks — with a polished UI and API backend.
+A full-stack task management application built with FastAPI (backend) and Next.js (frontend).  
+Users can create, edit, complete, and delete tasks through a polished UI backed by a RESTful API.
+
+**Live Demo:** [https://task-manager-54y7.vercel.app](https://task-manager-54y7.vercel.app)  
+**API Docs:** [https://task-manager-e36e.onrender.com/docs](https://task-manager-e36e.onrender.com/docs)
 
 ---
 
