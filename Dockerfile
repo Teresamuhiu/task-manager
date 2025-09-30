@@ -1,4 +1,4 @@
-#Building the app's environment(Python, dependencies, code)
+# Building the app's environment (Python, dependencies, code)
 FROM python:3.12-slim
 
 # Set working directory
@@ -11,8 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy source
 COPY . .
 
-# Expose port
-EXPOSE 8000
+# Expose Render's dynamic port (not strictly required, but good practice)
+EXPOSE 10000
 
-# Run server
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run server — use Render's $PORT
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
