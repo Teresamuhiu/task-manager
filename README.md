@@ -1,24 +1,24 @@
 ````markdown
 # Task Manager App 
 
-A full-stack **Task Manager** built with **FastAPI** (backend) and **Next.js** (frontend).  
+A full-stack Task Manager built with FastAPI (backend) and Next.js (frontend).  
 Users can add, edit, mark tasks as done/undo, and delete tasks — with a polished UI and API backend.
 
 ---
 
 ## Tech Stack
 
-- **Backend**: FastAPI, SQLAlchemy, SQLite (Postgres ready)  
-- **Frontend**: Next.js 15, TailwindCSS  
-- **DevOps**: Docker, GitHub Actions (tests + build)  
-- **Testing**: Pytest (backend API tests)  
+- Backend: FastAPI, SQLAlchemy, SQLite (Postgres ready)  
+- Frontend: Next.js 15, TailwindCSS  
+- DevOps: Docker, GitHub Actions (tests + build)  
+- Testing: Pytest (backend API tests)  
 
 ---
 
 ## Features
 
 - Create, read, update, delete tasks  
-- Mark tasks as **Completed** / **Pending**  
+- Mark tasks as Completed / Pending  
 - Inline editing with Save/Cancel  
 - Responsive Tailwind UI  
 - REST API with Swagger docs (`/docs`)  
@@ -29,7 +29,6 @@ Users can add, edit, mark tasks as done/undo, and delete tasks — with a polish
 ## Running Locally
 
 ### Backend
-```bash
 cd task-manager-api
 pip install -r requirements.txt
 uvicorn app.main:app --reload
@@ -75,11 +74,7 @@ docker-compose up --build
 
 ## CI/CD
 
-* GitHub Actions runs **pytest** on every push
+* GitHub Actions runs pytest on every push
 * Docker build workflow validates container builds
-
-```
-
----
 
 ```
