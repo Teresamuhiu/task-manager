@@ -7,15 +7,15 @@ models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI(title="Task Manager API", version="1.0")
 
-# Allow frontend (both local dev + deployed Vercel) to call backend
+# Explicit origins (local + deployed)
 origins = [
-    "http://localhost:3000",                     # local dev
-    "https://task-manager-54y7.vercel.app",      # deployed Vercel frontend
+    "http://localhost:3000",
+    "https://task-manager-54y7.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins,       # only this, no regex
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
